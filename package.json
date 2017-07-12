@@ -1,0 +1,27 @@
+{
+  "name": "buffet",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "font-awesome": "^4.7.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-fontawesome": "^1.6.1",
+    "react-redux": "^5.0.5",
+    "react-router": "^3.0.2",
+    "redux": "^3.7.1",
+    "redux-api-middleware": "^1.0.3"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5",
+    "redux-logger": "^3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "api": "json-server --watch api/db.json --routes api/route.json --port 8000"
+  }
+}
