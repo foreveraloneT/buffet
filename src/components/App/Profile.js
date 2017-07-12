@@ -3,37 +3,48 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import FontAwesome from 'react-fontawesome'
 import { getStoreProfile } from '../../actions/profile'
+import SaveModal from '../Modal/SaveModal'
 
 const Profile = ({
     detail,
+    showSaveModal,
+    closeSaveModal,
+    lunchSaveModal,
 }) => (
     <div>
         <form>
             <p className="topic">Information</p>
 
-            <label for="name">Store Name</label>
+            <label htmlFor="name">Store Name</label>
             <input type="text" className="form-input" id="name" value={detail.name} />
 
-            <label for="price">Buffet Price(Bath)</label>
+            <label htmlFor="price">Buffet Price(Bath)</label>
             <input type="text" className="form-input" id="price" value={detail.buffet_price} />
 
-            <label for="tel">Address</label>
+            <label htmlFor="tel">Address</label>
             <input type="text" className="form-input" id="address" value={detail.address} />
 
-            <label for="tel">Telephone</label>
+            <label htmlFor="tel">Telephone</label>
             <input type="text" className="form-input" id="tel" value={detail.telephone} />
 
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input type="email" className="form-input" id="email" value={detail.email} />
 
-            <button className="btn btn-primary pos-right">
+            <button type="button" className="btn btn-primary pos-right" onClick={() => lunchSaveModal()}>
                 <FontAwesome
                     className='mr-5'
-                    name='floppy-o'
-                    size='1x'/>
+                    name='floppy-o' />
                 Save
             </button>
         </form>
+
+        <SaveModal 
+            show={showSaveModal}
+            header="Save this information ?"
+            content="Are you confirm to save store information ?"
+            onClose={closeSaveModal}
+            onCalcel={closeSaveModal} />
+
     </div>
 )
 
@@ -43,8 +54,21 @@ class ProfileContainer extends Component {
         getDetail: PropTypes.func.isRequired,
     }
 
+    state = {
+        showSaveModal: false,
+    }
+
+    closeSaveModal = () => {
+        this.setState({showSaveModal: false})
+    }
+
+    lunchSaveModal = () => {
+        this.setState({showSaveModal: true})
+    }
+
     shouldComponentUpdate(nextProps, nextState) {
-        return this.props.detail !== nextProps.detail
+        return this.props.detail !== nextProps.detail ||
+               this.state.showSaveModal !== nextState.showSaveModal
     }
 
     componentDidMount() {
@@ -52,9 +76,13 @@ class ProfileContainer extends Component {
     }
 
     render() {
+        console.log(this.state)
         return (
             <Profile
-                detail={this.props.detail} />
+                detail={this.props.detail}
+                showSaveModal={this.state.showSaveModal} 
+                closeSaveModal={this.closeSaveModal}
+                lunchSaveModal={this.lunchSaveModal} />
         )
     }
 }
