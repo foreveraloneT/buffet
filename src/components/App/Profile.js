@@ -46,10 +46,18 @@ let Profile = ({
             header="Save this information ?"
             content="Are you confirm to save store information ?"
             onClose={onCloseSaveModal}
-            onCalcel={onCloseSaveModal}
+            onCancel={onCloseSaveModal}
             onSave={onSave} />
     </form>
 )
+
+Profile.propTypes = {
+    showSaveModal: PropTypes.bool.isRequired,
+    onSave: PropTypes.func.isRequired,
+    onCloseSaveModal: PropTypes.func.isRequired,
+    onLunchSaveModal: PropTypes.func.isRequired,
+    saveSuccess: PropTypes.bool.isRequired,
+}
 
 Profile = reduxForm({
     form: 'profile'
@@ -95,7 +103,7 @@ class ProfileContainer extends Component {
     render() {
         const { detail, saveSuccess } = this.props
         return (
-            this.props.detail.id == 0 ? null :
+            this.props.detail.id === 0 ? null :
             <Profile
                 initialValues={detail}
                 showSaveModal={this.state.showSaveModal} 

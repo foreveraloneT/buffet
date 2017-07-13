@@ -8,7 +8,7 @@ const SaveModal = ({
     header="Modal Header",
     content="modal Content",
     onClose,
-    onCalcel,
+    onCancel,
     onSave,
 }) => (
     <div 
@@ -25,7 +25,7 @@ const SaveModal = ({
                 <p>{content}</p>
             </div>
             <div className={styles['modal-footer']}>
-                <button type="button" className="btn btn-default" onClick={() => onCalcel()}>
+                <button type="button" className="btn btn-default" onClick={() => onCancel()}>
                     Cancel
                 </button>
 
@@ -36,5 +36,14 @@ const SaveModal = ({
         </div>
     </div>
 )
+
+SaveModal.propTypes = {
+    show: PropTypes.bool.isRequired,
+    header: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    onClose: PropTypes.func.isRequired,
+    onCancel: PropTypes.func.isRequired,
+    onSave: PropTypes.func.isRequired,
+}
 
 export default SaveModal

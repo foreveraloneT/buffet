@@ -11,7 +11,7 @@ const Navbar = ({
 }) => (
     <div>
         <div className={styles['desktop-only']}>
-            <img src={headerPic} classname={styles['header-pic']} />
+            <img src={headerPic} className={styles['header-pic']} />
         </div>
         <nav className={classNames(styles['navbar'], {[styles['responsive']]: responsive})}>
             <div className={styles['brand']}><a href="#">DeathStar</a></div>
@@ -24,11 +24,12 @@ const Navbar = ({
     </div>
 )
 
+Navbar.propTypes = {
+    responsive: PropTypes.bool.isRequired,
+    onClickMenu: PropTypes.func.isRequired,
+}
+
 class NavbarContainer extends Component {
-    static propTypes = {
-
-    }
-
     state = {
         responsive: false
     }
