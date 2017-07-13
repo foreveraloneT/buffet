@@ -1,3 +1,10 @@
+/*global*/
+body {
+    background-color: #ececec
+    /*background: url('../resources/bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+}
 /*layout*/
 .container-fluid {
   padding-right: 15px;
@@ -92,10 +99,10 @@
 
 .btn-primary {
     color: white;
-    background-color: #4CAF50;
+    background-color: #cc0000;
 }
 .btn-primary:hover {
-    background-color: #45A049;
+    background-color: #e60000;
 }
 
 .btn-default {
