@@ -5,6 +5,7 @@ import {
 } from '../constants/actionTypes'
 
 const initialState = {
+    id: 0,
     name: '',
     buffet_price: 0,
     telephone: '',

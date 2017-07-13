@@ -29,7 +29,7 @@ const SaveModal = ({
                     Cancel
                 </button>
 
-                <button type="button" className="btn btn-primary">
+                <button type="button" className="btn btn-primary" onClick={() => onSave()}>
                     Save Changes
                 </button>
             </div>
