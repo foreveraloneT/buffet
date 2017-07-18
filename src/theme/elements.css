@@ -71,6 +71,8 @@ body {
 /*content*/
 .topic {
     font-size: 1.5em;
+    font-weight: bold;
+    color: #cc0000;
 }
 
 .pos-right {
@@ -87,6 +89,13 @@ body {
     border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 20px;
+}
+.form-input:focus {
+    outline: none !important;
+    border: 1px solid #e60000;
+}
+.input-sm {
+    padding: 6px 10px;
 }
 
 .btn {

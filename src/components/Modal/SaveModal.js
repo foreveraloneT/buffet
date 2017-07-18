@@ -7,6 +7,7 @@ const SaveModal = ({
     show=true,
     header="Modal Header",
     content="modal Content",
+    saveWord="Save Changes",
     onClose,
     onCancel,
     onSave,
@@ -30,7 +31,7 @@ const SaveModal = ({
                 </button>
 
                 <button type="button" className="btn btn-primary" onClick={() => onSave()}>
-                    Save Changes
+                    { saveWord }
                 </button>
             </div>
         </div>

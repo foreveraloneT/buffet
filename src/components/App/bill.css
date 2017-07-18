@@ -1,0 +1,10 @@
+:local(.price-list) {
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+@media (min-width: 768px) {
+  :local(.price-list) {
+    padding-right: 40%
+  }
+}

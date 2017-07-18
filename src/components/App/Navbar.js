@@ -15,8 +15,8 @@ const Navbar = ({
         </div>
         <nav className={classNames(styles['navbar'], {[styles['responsive']]: responsive})}>
             <div className={styles['brand']}><a href="#">DeathStar</a></div>
-            <a href="/">Management</a>
-            <a href="#">Bill</a>
+            <a href="/profile">Management</a>
+            <a href="/">Bill</a>
             <a href="#">Promotion</a>
             <a href="#">Reservation</a>
             <a href="javascript:void(0);" className={styles['icon']} onClick={() => onClickMenu()}>&#9776;</a>

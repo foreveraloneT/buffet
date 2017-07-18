@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Death Star Buffet @Siam Paragon",
-      "buffet_price": "459",
+      "buffet_price": 459,
       "address": "G floor, Siam Paragon, Bangkok, Thailand",
       "telephone": "02-123-4567",
       "email": "anakin.s@deathstar.com"

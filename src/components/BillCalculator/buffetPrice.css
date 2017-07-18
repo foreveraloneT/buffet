@@ -1,0 +1,21 @@
+:local(.row) {
+    width:100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+}
+
+:local(.col) {
+    width: 33.33%;
+    padding: 3px 3px 3px 0px;
+}
+
+:local(.person-input) {
+    width: 50px;
+    
+}
+
+:local(.price) {
+    text-align: right;
+}

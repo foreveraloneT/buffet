@@ -85,9 +85,11 @@ class ProfileContainer extends Component {
     }
 
     saveProfile = () => {
-        const params = this.props.currentForm.values
+        let params = this.props.currentForm.values
+        params['buffet_price'] = Number(params['buffet_price'])
         this.props.editProfile(params)
         this.closeSaveModal()
+        this.props.getDetail()
     }
 
     shouldComponentUpdate(nextProps, nextState) {
