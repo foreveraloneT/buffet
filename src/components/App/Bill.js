@@ -4,23 +4,43 @@ import PropTypes from 'prop-types'
 import SaveModal from '../Modal/SaveModal'
 import { getStoreProfile } from '../../actions/profile'
 import BuffetPrice from '../BillCalculator/BuffetPrice'
+import PromotionSelect from '../BillCalculator/PromotionSelect'
 import styles from './bill.css'
 
 const Bill = ({
     buffetPrice=0,
+    billDetail,
 }) => (
     <div>
         <p className="topic">Bill Calculator</p>
         <p>Buffet Price: <b>{buffetPrice}</b> Bath per person</p>
         <div className={styles['price-list']}>
             <BuffetPrice buffetPrice={buffetPrice} />
+            {
+                billDetail.discount.map((promotion) => (
+                    <p>{promotion.code}</p>
+                ))
+            }
+            <div className={styles['line-top']}>
+                <PromotionSelect />
+            </div>
+            <div className={styles['line-top']}>
+                <button className="btn btn-primary" style={{width:"100%"}}>Submit</button>
+            </div>
         </div>
+        
     </div>
 )
+
+Bill.propTypes = {
+    buffetPrice: PropTypes.number.isRequired,
+    billDetail: PropTypes.object.isRequired,
+}
 
 class BillContainer extends Component {
     static propTypes = {
         buffetPrice: PropTypes.number.isRequired,
+        // promotions: PropTypes.array.isRequired,
         getProfile: PropTypes.func.isRequired,
     }
 
@@ -41,16 +61,18 @@ class BillContainer extends Component {
     }
 
     render() {
-        const { buffetPrice } = this.props
+        const { buffetPrice, billDetail } = this.props
         return (
             <Bill 
-                buffetPrice={ buffetPrice } />
+                buffetPrice={ buffetPrice }
+                billDetail={ billDetail } />
         )
     }
 }
 
 const mapStateToProps = (state) => ({
     buffetPrice: state.profile.buffet_price,
+    // promotions: state.promotion,
     billDetail: state.billCalculator,
 })
 

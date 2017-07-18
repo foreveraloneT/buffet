@@ -114,6 +114,14 @@ body {
     background-color: #e60000;
 }
 
+.btn-secondary {
+    color: white;
+    background-color: #555;
+}
+.btn-secondary:hover {
+    background-color: #666;
+}
+
 .btn-default {
     color: #333;
     background-color: #fff;

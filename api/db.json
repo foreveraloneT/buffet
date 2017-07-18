@@ -12,18 +12,110 @@
   "employee": [
     {
       "id": 1,
+      "status": "enable",
       "firstname": "Luke",
       "lastname": "Skywalker",
       "picture": ""
     },
     {
-      "id": 1,
+      "id": 2,
+      "status": "enable",
       "firstname": "Leia",
       "lastname": "Skywalker",
       "picture": ""
+    },
+    {
+      "id": 3,
+      "status": "enable",
+      "firstname": "Han",
+      "lastname": "Solo",
+      "picture": ""
     }
   ],
-  "promotion": [],
+  "promotion": [
+    {
+      "id": 1,
+      "status": "enable",
+      "code": "LUCKY ONE",
+      "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
+      "type": "multiple",
+      "need_coupon": true,
+      "auto_discount": true,
+      "auto_discount_condition": [
+        {
+          "for": "total_price",
+          "operation": ">",
+          "value": 1000
+        }
+      ],
+      "discount": {
+        "value": 15,
+        "unit": "percent"
+      },
+      "use_per": {
+        "value": 1,
+        "unit": "bill"
+      }
+    },
+    {
+      "id": 2,
+      "status": "enable",
+      "code": "4PAY3",
+      "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+      "type": "multiple",
+      "need_coupon": true,
+      "auto_discount": false,
+      "discount": {
+        "value": 459,
+        "unit": "bath"
+      },
+      "use_per": {
+        "value": 4,
+        "unit": "person"
+      }
+    },
+    {
+      "id": 3,
+      "status": "enable",
+      "code": "LUCKY TWO",
+      "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+      "type": "multiple",
+      "need_coupon": true,
+      "auto_discount": false,
+      "discount": {
+        "value": 20,
+        "unit": "percent"
+      },
+      "use_per": {
+        "value": 2,
+        "unit": "person"
+      }
+    },
+    {
+      "id": 4,
+      "status": "enable",
+      "code": "LUCKY THREE",
+      "detail": "Discount 25% when the bill is over 6,000 Bath but it exclude all promotion",
+      "type": "single",
+      "need_coupon": false,
+      "auto_discount": true,
+      "auto_discount_condition": [
+        {
+          "for": "total_price",
+          "operation": ">",
+          "value": 6000
+        }
+      ],
+      "discount": {
+        "value": 25,
+        "unit": "percent"
+      },
+      "use_per": {
+        "value": 1,
+        "unit": "bill"
+      }
+    }
+  ],
   "bill": [],
   "seat": [],
   "reservation": []

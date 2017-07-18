@@ -30,7 +30,7 @@ const BuffetPrice = ({
 )
 
 class BuffetPriceContainer extends Component {
-    propTypes = {
+    static propTypes = {
         buffetPrice: PropTypes.number.isRequired,
         personCount: PropTypes.number.isRequired,
         changePerson: PropTypes.func.isRequired,
