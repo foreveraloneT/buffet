@@ -67,7 +67,7 @@ const DiscountItem = ({
                     </div>
                 </div>
                 <div className={styles["discount-sum"]}>
-                    {calculateDiscount(buffetPrice, totalPerson, usePer, discount)} Bath
+                    <b>{calculateDiscount(buffetPrice, totalPerson, usePer, discount)}</b> Bath
                 </div>
             </div>
         </div>

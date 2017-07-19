@@ -1,3 +1,7 @@
+:local(.discount-list) {
+    margin-bottom: 10px;
+}
+
 :local(.item-card) {
     width: 100%;
     padding: 3px 0px;

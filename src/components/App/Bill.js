@@ -6,6 +6,7 @@ import SaveModal from '../Modal/SaveModal'
 import DiscountList from '../BillCalculator/Discount/DiscountList'
 import BuffetPrice from '../BillCalculator/BuffetPrice'
 import PromotionSelect from '../BillCalculator/PromotionSelect'
+import TotalPrice from '../BillCalculator/TotalPrice'
 import styles from './bill.css'
 
 const Bill = ({
@@ -21,6 +22,9 @@ const Bill = ({
                 buffetPrice={buffetPrice}
                 totalPerson={billDetail.personCount}
                 discountList={billDetail.discount} />
+            <div className={styles['line-top']}>
+                <TotalPrice />
+            </div>
             <div className={styles['line-top']}>
                 <PromotionSelect />
             </div>

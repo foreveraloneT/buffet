@@ -1,0 +1,16 @@
+:local(.container) {
+    width: 100%;
+    display: flex;
+    padding: 15px 0px;
+    font-size: 1.4em;
+}
+
+:local(.total-text) {
+    width: 50%;
+    font-weight: bold;
+}
+
+:local(.total-value) {
+    width: 50%;
+    text-align: right;
+}

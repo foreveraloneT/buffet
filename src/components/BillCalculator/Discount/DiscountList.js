@@ -8,7 +8,7 @@ const DiscountList = ({
     totalPerson=0,
     discountList,
 }) => (
-    <div>
+    <div className={styles['discount-list']}>
         {console.log(discountList)}
         {
             discountList.map((promotion, order) => (
