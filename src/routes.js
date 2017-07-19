@@ -16,7 +16,6 @@ export default () => {
                     path='/profile'
                     component={ Profile } />
             </Route>
-
         </Router>
     )
 }
