@@ -40,6 +40,7 @@
       "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
       "type": "multiple",
       "need_coupon": true,
+      "have_condition": false,
       "auto_discount": true,
       "auto_discount_condition": [
         {
@@ -64,6 +65,12 @@
       "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
       "type": "multiple",
       "need_coupon": true,
+      "have_condition": true,
+      "condition": {
+        "for": "total_person",
+        "operation": ">=",
+        "value": 4
+      },
       "auto_discount": false,
       "discount": {
         "value": 459,
@@ -81,6 +88,12 @@
       "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
       "type": "multiple",
       "need_coupon": true,
+      "have_condition": true,
+      "condition": {
+        "for": "total_person",
+        "operation": ">=",
+        "value": 2
+      },
       "auto_discount": false,
       "discount": {
         "value": 20,
@@ -98,6 +111,12 @@
       "detail": "Discount 25% when the bill is over 6,000 Bath but it exclude all promotion",
       "type": "single",
       "need_coupon": false,
+      "have_condition": true,
+      "condition": {
+        "for": "total_price",
+        "operation": ">=",
+        "value": 6000
+      },
       "auto_discount": true,
       "auto_discount_condition": [
         {

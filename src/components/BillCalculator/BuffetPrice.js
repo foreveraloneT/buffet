@@ -13,7 +13,7 @@ const BuffetPrice = ({
 }) => (
     <div className={styles['row']}>
         <div className={styles['col']}>
-            Buffet for
+            <b>BUFFET</b>
         </div>
         <div className={styles['col']}>
             <input 

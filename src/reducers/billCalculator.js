@@ -2,6 +2,7 @@ import {
     CHANGE_PERSON_NUMBER,
     ADD_PROMOTION_CODE,
     REMOVE_ALL_PROMOTION_CODE,
+    REMOVE_PROMOTION_BY_ORDER,
 } from '../constants/actionTypes'
 
 const initialState = {
@@ -22,6 +23,14 @@ export default (state=initialState, action) => {
             return {
                 personCount: state.personCount,
                 discount: [],
+            }
+        case REMOVE_PROMOTION_BY_ORDER:
+            console.log(action.order)
+            return {
+                personCount: state.personCount,
+                discount: state.discount.filter((promotion, order) => (
+                    order !== action.order
+                ))
             }
         default: 
             return state

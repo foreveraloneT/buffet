@@ -1,0 +1,49 @@
+:local(.item-card) {
+    width: 100%;
+    padding: 3px 0px;
+}
+
+:local(.item-topic) {
+    font-weight: bold;
+}
+
+:local(.item-content) {
+    display: flex;
+    align-items: center;
+}
+
+:local(.remove-zone) {
+    width: 10%;
+}
+
+:local(.discount-detail) {
+    width: 60%;
+}
+
+:local(.discount-subdetail){
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555
+}
+
+:local(.discount-sum){
+    width: 30%;
+    color: red;
+    text-align: right;
+}
+
+:local(.close-button) {
+    padding: 15px 8px;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+:local(.close-button:hover) {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #8c8c8c;
+}

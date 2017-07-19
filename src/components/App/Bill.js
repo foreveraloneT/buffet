@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import SaveModal from '../Modal/SaveModal'
 import { getStoreProfile } from '../../actions/profile'
+import SaveModal from '../Modal/SaveModal'
+import DiscountList from '../BillCalculator/Discount/DiscountList'
 import BuffetPrice from '../BillCalculator/BuffetPrice'
 import PromotionSelect from '../BillCalculator/PromotionSelect'
 import styles from './bill.css'
@@ -16,11 +17,10 @@ const Bill = ({
         <p>Buffet Price: <b>{buffetPrice}</b> Bath per person</p>
         <div className={styles['price-list']}>
             <BuffetPrice buffetPrice={buffetPrice} />
-            {
-                billDetail.discount.map((promotion) => (
-                    <p>{promotion.code}</p>
-                ))
-            }
+            <DiscountList
+                buffetPrice={buffetPrice}
+                totalPerson={billDetail.personCount}
+                discountList={billDetail.discount} />
             <div className={styles['line-top']}>
                 <PromotionSelect />
             </div>
