@@ -37,6 +37,7 @@
       "id": 1,
       "status": "enable",
       "code": "LUCKY ONE",
+      "_code": "LUCKY_ONE",
       "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
       "type": "multiple",
       "need_coupon": true,
@@ -44,8 +45,8 @@
       "auto_discount": true,
       "auto_discount_condition": [
         {
-          "for": "total_price",
-          "operation": ">",
+          "field": "total_price",
+          "operator": ">",
           "value": 1000
         }
       ],
@@ -62,15 +63,18 @@
       "id": 2,
       "status": "enable",
       "code": "4PAY3",
+      "_code": "4PAY3",
       "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
       "type": "multiple",
       "need_coupon": true,
       "have_condition": true,
-      "condition": {
-        "for": "total_person",
-        "operation": ">=",
-        "value": 4
-      },
+      "condition": [
+        {
+          "field": "total_person",
+          "operator": ">=",
+          "value": 4
+        }
+      ],
       "auto_discount": false,
       "discount": {
         "value": 459,
@@ -85,15 +89,18 @@
       "id": 3,
       "status": "enable",
       "code": "LUCKY TWO",
+      "_code": "LUCKY_TWO",
       "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
       "type": "multiple",
       "need_coupon": true,
       "have_condition": true,
-      "condition": {
-        "for": "total_person",
-        "operation": ">=",
-        "value": 2
-      },
+      "condition": [
+        {
+          "field": "total_person",
+          "operator": ">=",
+          "value": 2
+        }
+      ],
       "auto_discount": false,
       "discount": {
         "value": 20,
@@ -108,20 +115,23 @@
       "id": 4,
       "status": "enable",
       "code": "LUCKY THREE",
+      "_code": "LUCKY_THREE",
       "detail": "Discount 25% when the bill is over 6,000 Bath but it exclude all promotion",
       "type": "single",
       "need_coupon": false,
       "have_condition": true,
-      "condition": {
-        "for": "total_price",
-        "operation": ">=",
-        "value": 6000
-      },
+      "condition": [
+        {
+          "field": "total_price",
+          "operator": ">=",
+          "value": 6000
+        }
+      ],
       "auto_discount": true,
       "auto_discount_condition": [
         {
-          "for": "total_price",
-          "operation": ">",
+          "field": "total_price",
+          "operator": ">",
           "value": 6000
         }
       ],

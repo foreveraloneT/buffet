@@ -1,6 +1,7 @@
 import {
     CHANGE_PERSON_NUMBER,
     ADD_PROMOTION_CODE,
+    ADD_PROMOTION_CODE_LIST,
     REMOVE_ALL_PROMOTION_CODE,
     REMOVE_PROMOTION_BY_ORDER,
 } from '../constants/actionTypes'
@@ -18,6 +19,11 @@ export default (state=initialState, action) => {
             return {
                 personCount: state.personCount,
                 discount: [...state.discount, action.promotion]
+            }
+        case ADD_PROMOTION_CODE_LIST: 
+            return {
+                personCount: state.personCount,
+                discount: [...state.discount, ...action.promotions]
             }
         case REMOVE_ALL_PROMOTION_CODE:
             return {

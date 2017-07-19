@@ -9,7 +9,6 @@ const DiscountList = ({
     discountList,
 }) => (
     <div className={styles['discount-list']}>
-        {console.log(discountList)}
         {
             discountList.map((promotion, order) => (
                 <DiscountItem

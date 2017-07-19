@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { getStoreProfile } from '../../actions/profile'
+// import { getStoreProfile } from '../../actions/profile'
 import SaveModal from '../Modal/SaveModal'
 import DiscountList from '../BillCalculator/Discount/DiscountList'
 import BuffetPrice from '../BillCalculator/BuffetPrice'
@@ -27,7 +27,7 @@ const Bill = ({
             </div>
             <div className={styles['line-top']}>
                 <PromotionSelect />
-                <i style={{color:"red", fontSize:"0.8em"}}>Note: No condition checking for manual select</i>
+                <i style={{color:"red", fontSize:"0.8em"}}>Note: No condition checking for manual enter</i>
             </div>
             <div className={styles['line-top']}>
                 <button className="btn btn-primary" style={{width:"100%"}}>Submit</button>

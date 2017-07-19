@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './discount.css'
 import numeral from 'numeral'
 import { removePromotionByOrder } from '../../../actions/billCalculator' 
+import FontAwesome from 'react-fontawesome'
 
 const calculateStartPrice = (buffetPrice, totalPerson, usePer) => {
     if (usePer.unit === "bill")
@@ -43,7 +44,7 @@ const DiscountItem = ({
     promotion,
     onDestroy,
 }) => {
-    const { code, type, discount, use_per } = promotion
+    const { code, type, discount, use_per, detail } = promotion
     const usePer = use_per
 
     return (
@@ -59,6 +60,12 @@ const DiscountItem = ({
                 <div className={styles["discount-detail"]}>
                     <div className={styles["item-topic"]}>
                         {code}
+                        <span className="desktop-only">
+                            <FontAwesome 
+                                name="info-circle"
+                                className="ml-5"
+                                title={detail} />
+                        </span>
                     </div>
                     <div className={styles["discount-subdetail"]}>
                         discount {discount.value} {discount.unit} for {usePer.value} {usePer.unit} <br />

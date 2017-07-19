@@ -35,6 +35,12 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
 /*margin and padding*/
 .m5 {
     margin: 5px;
