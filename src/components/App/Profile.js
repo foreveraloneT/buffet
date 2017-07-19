@@ -98,9 +98,9 @@ class ProfileContainer extends Component {
                this.state.showSaveModal !== nextState.showSaveModal
     }
 
-    componentDidMount() {
-        this.props.getDetail()
-    }
+    // componentDidMount() {
+    //     this.props.getDetail()
+    // }
 
     render() {
         const { detail, saveSuccess } = this.props

@@ -41,7 +41,7 @@ class BillContainer extends Component {
     static propTypes = {
         buffetPrice: PropTypes.number.isRequired,
         // promotions: PropTypes.array.isRequired,
-        getProfile: PropTypes.func.isRequired,
+        // getProfile: PropTypes.func.isRequired,
     }
 
     state = {
@@ -56,9 +56,9 @@ class BillContainer extends Component {
         this.setState({showSaveModal: true})
     }
 
-    componentDidMount() {
-        this.props.getProfile()
-    }
+    // componentDidMount() {
+    //     this.props.getProfile()
+    // }
 
     render() {
         const { buffetPrice, billDetail } = this.props
@@ -78,7 +78,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
     mapStateToProps,
-    {
-        getProfile: getStoreProfile,
-    }
+    {}
 )(BillContainer)
