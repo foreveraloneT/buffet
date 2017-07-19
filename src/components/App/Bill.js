@@ -27,6 +27,7 @@ const Bill = ({
             </div>
             <div className={styles['line-top']}>
                 <PromotionSelect />
+                <i style={{color:"red", fontSize:"0.8em"}}>Note: No condition checking for manual select</i>
             </div>
             <div className={styles['line-top']}>
                 <button className="btn btn-primary" style={{width:"100%"}}>Submit</button>
