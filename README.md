@@ -1,4 +1,4 @@
-* The purpose of this project is for learn react and redux.
+* The purpose of this project is to learn react and redux.
 * This project was bootstrapped with Create React App.
 * This project use redux.
 * This project use API from json-server.
