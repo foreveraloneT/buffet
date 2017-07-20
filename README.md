@@ -1,7 +1,7 @@
 * The purpose of this project is to learn react and redux.
 * This project was bootstrapped with Create React App.
 * This project use redux.
-* This project use API from json-server.
+* This project use API from json-server [https://github.com/typicode/json-server](https://github.com/typicode/json-server).
 
 ## Pre-install
 
@@ -30,14 +30,24 @@ $ npm install -g json-server
 
 ## How to run application
 
-start web application.
+1. Install dependencies package
 
 ```bash
 $ npm install
+```
+2. Start json-server 
+
+```bash
 $ npm run api 
+```
+
+3. Run web application in localhost
+
+```bash
 $ npm start
 ```
-then , goto [http://localhost:3000]() and enjoy.
+
+then , go to [http://localhost:3000]() and enjoy.
 
 ## License
 
