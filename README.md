@@ -1,14 +1,14 @@
 * The purpose of this project is to learn react and redux.
 * This project was bootstrapped with Create React App.
 * This project use redux.
-* This project use API from json-server [https://github.com/typicode/json-server](https://github.com/typicode/json-server).
+* This project use API from json-server v.0.10.0 [https://github.com/typicode/json-server](https://github.com/typicode/json-server).
 
 ## Pre-install
 
-install json server [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
+install json server v.0.10.0 [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
 
 ```bash
-$ npm install -g json-server
+$ npm install -g json-server@0.10.0
 ```
 
 ## Feature
