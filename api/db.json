@@ -145,7 +145,1129 @@
       }
     }
   ],
-  "bill": [],
+  "bill": [
+    {
+      "uid": "nrulc8a54m",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 8,
+        "discount": [
+          {
+            "id": 1,
+            "status": "enable",
+            "code": "LUCKY ONE",
+            "_code": "LUCKY_ONE",
+            "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": false,
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 1000
+              }
+            ],
+            "discount": {
+              "value": 15,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          },
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-20T12:20:01+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*8",
+          "price": 3672
+        },
+        {
+          "item": "LUCKY ONE",
+          "price": -550.8
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        }
+      ],
+      "cash": 2500,
+      "total": 2295,
+      "change": 205,
+      "id": 1
+    },
+    {
+      "uid": "b8et6eyocx",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": []
+      },
+      "datetime_create": "2017-07-20T13:10:57+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        }
+      ],
+      "cash": 500,
+      "total": 459,
+      "change": 41,
+      "id": 2
+    },
+    {
+      "uid": "f2q4r36v6f",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 17,
+        "discount": [
+          {
+            "id": 4,
+            "status": "enable",
+            "code": "LUCKY THREE",
+            "_code": "LUCKY_THREE",
+            "detail": "Discount 25% when the bill is over 6,000 Bath but it exclude all promotion",
+            "type": "single",
+            "need_coupon": false,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_price",
+                "operator": ">=",
+                "value": 6000
+              }
+            ],
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 6000
+              }
+            ],
+            "discount": {
+              "value": 25,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-20T13:12:19+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*17",
+          "price": 7803
+        },
+        {
+          "item": "LUCKY THREE",
+          "price": -1950.75
+        }
+      ],
+      "cash": 6000,
+      "total": 5852.25,
+      "change": 147.75,
+      "id": 3
+    },
+    {
+      "uid": "8q1jh42hwi",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 4,
+        "discount": [
+          {
+            "id": 1,
+            "status": "enable",
+            "code": "LUCKY ONE",
+            "_code": "LUCKY_ONE",
+            "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": false,
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 1000
+              }
+            ],
+            "discount": {
+              "value": 15,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          },
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-20T13:18:47+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*4",
+          "price": 1836
+        },
+        {
+          "item": "LUCKY ONE",
+          "price": -275.4
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        }
+      ],
+      "cash": 2000,
+      "total": 1101.6,
+      "change": 898.4000000000001,
+      "id": 4
+    },
+    {
+      "uid": "dgchlc09yj",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": []
+      },
+      "datetime_create": "2017-07-20T13:19:29+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        }
+      ],
+      "cash": 1100,
+      "total": 459,
+      "change": 641,
+      "id": 5
+    },
+    {
+      "uid": "3h7675op4q",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": []
+      },
+      "datetime_create": "2017-07-20T13:21:55+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        }
+      ],
+      "cash": 500,
+      "total": 459,
+      "change": 41,
+      "id": 6
+    },
+    {
+      "uid": "le912rwrsd",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": []
+      },
+      "datetime_create": "2017-07-20T13:23:26+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        }
+      ],
+      "cash": 500,
+      "total": 459,
+      "change": 41,
+      "id": 7
+    },
+    {
+      "uid": "kgyfed5gje",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": []
+      },
+      "datetime_create": "2017-07-20T13:24:07+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        }
+      ],
+      "cash": 500,
+      "total": 459,
+      "change": 41,
+      "id": 8
+    },
+    {
+      "uid": "ogk3ub1w5u",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": []
+      },
+      "datetime_create": "2017-07-20T13:24:57+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        }
+      ],
+      "cash": 600,
+      "total": 459,
+      "change": 141,
+      "id": 9
+    },
+    {
+      "uid": "asfdrj7hyw",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": []
+      },
+      "datetime_create": "2017-07-20T13:26:00+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        }
+      ],
+      "cash": 500,
+      "total": 459,
+      "change": 41,
+      "id": 10
+    },
+    {
+      "uid": "2efy25brq6",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 17,
+        "discount": [
+          {
+            "id": 4,
+            "status": "enable",
+            "code": "LUCKY THREE",
+            "_code": "LUCKY_THREE",
+            "detail": "Discount 25% when the bill is over 6,000 Bath but it exclude all promotion",
+            "type": "single",
+            "need_coupon": false,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_price",
+                "operator": ">=",
+                "value": 6000
+              }
+            ],
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 6000
+              }
+            ],
+            "discount": {
+              "value": 25,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-20T13:26:37+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*17",
+          "price": 7803
+        },
+        {
+          "item": "LUCKY THREE",
+          "price": -1950.75
+        }
+      ],
+      "cash": 6000,
+      "total": 5852.25,
+      "change": 147.75,
+      "id": 11
+    },
+    {
+      "uid": "8spihx53rp",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 17,
+        "discount": [
+          {
+            "id": 1,
+            "status": "enable",
+            "code": "LUCKY ONE",
+            "_code": "LUCKY_ONE",
+            "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": false,
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 1000
+              }
+            ],
+            "discount": {
+              "value": 15,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          },
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-20T13:27:06+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*17",
+          "price": 7803
+        },
+        {
+          "item": "LUCKY ONE",
+          "price": -1170.45
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        }
+      ],
+      "cash": 4000,
+      "total": 3327.7499999999995,
+      "change": 672.2500000000005,
+      "id": 12
+    },
+    {
+      "uid": "2dqrxifd2i",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 8,
+        "discount": [
+          {
+            "id": 1,
+            "status": "enable",
+            "code": "LUCKY ONE",
+            "_code": "LUCKY_ONE",
+            "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": false,
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 1000
+              }
+            ],
+            "discount": {
+              "value": 15,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          },
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-20T13:28:38+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*8",
+          "price": 3672
+        },
+        {
+          "item": "LUCKY ONE",
+          "price": -550.8
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        }
+      ],
+      "cash": 3000,
+      "total": 2295,
+      "change": 705,
+      "id": 13
+    }
+  ],
   "seat": [],
   "reservation": []
 }

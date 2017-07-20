@@ -4,6 +4,8 @@ export const STORE_PROFILE_ENDPOINT = `${BASE_API}/profile/1`
 
 export const PROMOTION_ENDPOINT = `${BASE_API}/promotion`
 
+export const BILL_ENDPOINT = `${BASE_API}/bill`
+
 export const getParamsQuery = (params = {}) => (
         params == {} ? '' :
         Object.keys(params).reduce((query, param) => (

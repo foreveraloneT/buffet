@@ -3,19 +3,23 @@ import { Router, Route, IndexRoute, browserHistory, Redirect } from 'react-route
 import App from './components/App/App'
 import Profile from './components/App/Profile'
 import Bill from './components/App/Bill'
+import BillDetail from './components/App/BillDetail'
 
 export default () => {
     return (
         <Router history={ browserHistory }>
             <Route
-                path='/'
+                path="/"
                 component={ App } >
                 <IndexRoute component={ Bill } />
-                <Redirect from='/bill' to='/' />
+                <Redirect from="/bill" to="/" />
                 <Route 
-                    path='/profile'
+                    path="/profile"
                     component={ Profile } />
             </Route>
+            <Route
+                path="/bill/:uid"
+                component={BillDetail} />
         </Router>
     )
 }

@@ -215,7 +215,7 @@ class PromotionSelectContainer extends Component {
                              multipleDiscount
 
         if (bestDiscount.promotion.length > 0) {
-            console.log(bestDiscount)
+            // console.log(bestDiscount)
             enterPromotionList(bestDiscount.promotion)
         }
         else {
