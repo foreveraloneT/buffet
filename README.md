@@ -17,13 +17,13 @@ $ npm install -g json-server
   * Manual add promotion code \(complete\) 
   * Auto add the best set of promotion code \(complete\)
   * Show invoice \(complete\)
-* Promotion Code UI \(inprogress\)
+* Promotion Code UI \(in progress\)
   * List all promotion \(complete\) 
   * Change status of promotion \(complete\)
   * Show promotion detail
   * Create new promotion
   * Update promotion
-* Reservation UI \(inprogress\)
+* Reservation UI \(in progress\)
   * Reservation system
   * List customer's reservation
   * Change status of reservation
