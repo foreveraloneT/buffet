@@ -143,6 +143,32 @@
         "value": 1,
         "unit": "bill"
       }
+    },
+    {
+      "id": 5,
+      "status": "disable",
+      "code": "LUCKY FOUR",
+      "_code": "LUCKY_FOUR",
+      "detail": "Discount 50% when the bill is over 6,000 Bath and present a coupon \"LUCKY FOUR\" but it exclude all promotion",
+      "type": "single",
+      "need_coupon": true,
+      "have_condition": true,
+      "condition": [
+        {
+          "field": "total_price",
+          "operator": ">=",
+          "value": 6000
+        }
+      ],
+      "auto_discount": false,
+      "discount": {
+        "value": 50,
+        "unit": "percent"
+      },
+      "use_per": {
+        "value": 1,
+        "unit": "bill"
+      }
     }
   ],
   "bill": [
@@ -1266,6 +1292,176 @@
       "total": 2295,
       "change": 705,
       "id": 13
+    },
+    {
+      "uid": "rlgl8yg7bm",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 4,
+        "discount": [
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-20T17:44:16+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*4",
+          "price": 1836
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        }
+      ],
+      "cash": 1500,
+      "total": 1377,
+      "change": 123,
+      "id": 14
+    },
+    {
+      "uid": "iihp7v3d25",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 14,
+        "discount": [
+          {
+            "id": 5,
+            "status": "enable",
+            "code": "LUCKY FOUR",
+            "_code": "LUCKY_FOUR",
+            "detail": "Discount 50% when the bill is over 6,000 Bath and present a coupon \"LUCKY FOUR\" but it exclude all promotion",
+            "type": "single",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_price",
+                "operator": ">=",
+                "value": 6000
+              }
+            ],
+            "auto_discount": false,
+            "discount": {
+              "value": 50,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-20T17:57:05+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*14",
+          "price": 6426
+        },
+        {
+          "item": "LUCKY FOUR",
+          "price": -3213
+        }
+      ],
+      "cash": 5000,
+      "total": 3213,
+      "change": 1787,
+      "id": 15
+    },
+    {
+      "uid": "dqn2ybqkqj",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": []
+      },
+      "datetime_create": "2017-07-20T17:57:28+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        }
+      ],
+      "cash": 5000,
+      "total": 459,
+      "change": 4541,
+      "id": 16
+    },
+    {
+      "uid": "ibxo9xa4nd",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 14,
+        "discount": []
+      },
+      "datetime_create": "2017-07-20T17:57:54+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*14",
+          "price": 6426
+        }
+      ],
+      "cash": 7000,
+      "total": 6426,
+      "change": 574,
+      "id": 17
     }
   ],
   "seat": [],

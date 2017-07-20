@@ -8,30 +8,41 @@ import { Field, reduxForm } from 'redux-form'
 let FormAutoDisCount = ({
     personCount=0,
     promotionList,
-}) => (
-    <form>
-        {
-            promotionList.map((promotion) => {
-                const { id, code, _code, use_per, need_coupon } = promotion
-                const maxCoupon = use_per.unit === "bill" ? 1 : Math.floor(personCount/use_per.value)
-                return need_coupon && maxCoupon > 0 ?
-                (
-                    <div key={id}>
-                        <label>{code} (max = {maxCoupon})</label>
-                        <Field
-                            component="input"
-                            name={_code}
-                            className="form-input"
-                            type="number"
-                            min="0"
-                            max={maxCoupon} />
-                    </div>
-                ) :
-                null
-            })
-        }
-    </form>
-)
+}) => {
+    const promotionCanUse = promotionList.map((promotion) => {
+        const { id, code, _code, use_per, need_coupon } = promotion
+        const maxCoupon = use_per.unit === "bill" ? 1 : Math.floor(personCount/use_per.value)
+        return need_coupon && maxCoupon > 0 ?
+        (
+            <div key={id}>
+                <label>{code} (max = {maxCoupon})</label>
+                <Field
+                    component="input"
+                    name={_code}
+                    className="form-input"
+                    type="number"
+                    min="0"
+                    max={maxCoupon} />
+            </div>
+        ) :
+        null
+    })
+
+    const countPromotion = promotionCanUse.reduce((count, item) => {
+        if (item)
+            return count + 1
+        return count
+    }, 0)
+    
+    return (
+        <form>
+            {
+               countPromotion > 0 ? promotionCanUse : 
+               <div style={{textAlign: "center"}}><i>No appropriate promotion</i></div>
+            }
+        </form>
+    )
+}
 
 FormAutoDisCount.propTypes = {
     personCount: PropTypes.number,

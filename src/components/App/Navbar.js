@@ -14,10 +14,10 @@ const Navbar = ({
             <img src={headerPic} className={styles['header-pic']} />
         </div>
         <nav className={classNames(styles['navbar'], {[styles['responsive']]: responsive})}>
-            <div className={styles['brand']}><a href="#">DeathStar</a></div>
+            <div className={styles['brand']}><a href="/profile">DeathStar</a></div>
             <a href="/profile">Management</a>
             <a href="/">Bill</a>
-            <a href="#">Promotion</a>
+            <a href="/promotion">Promotion</a>
             <a href="#">Reservation</a>
             <a href="javascript:void(0);" className={styles['icon']} onClick={() => onClickMenu()}>&#9776;</a>
         </nav>
