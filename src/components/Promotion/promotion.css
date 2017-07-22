@@ -1,3 +1,25 @@
 :local(.promotion-list) {
     margin-top: 20px;
 }
+
+:local(.input-group) {
+    padding: 20px
+}
+
+:local(.list-input-group) {
+    padding: 20px;
+    margin-bottom: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+ :local(.close) {
+    color: #cc0000;
+    cursor: pointer;
+}
+
+:local(.close:hover),
+:local(.close:focus) {
+    color: #e60000;
+} 

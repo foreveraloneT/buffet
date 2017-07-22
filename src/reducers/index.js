@@ -4,6 +4,7 @@ import app from './app'
 import billCalculator from './billCalculator'
 import promotion from './promotion'
 import bill from './bill'
+import promotionDetail from './promotionDetail'
 import { reducer as formReducer } from 'redux-form'
 
 export default combineReducers({
@@ -11,6 +12,7 @@ export default combineReducers({
     profile,
     billCalculator,
     promotion,
+    promotionDetail,
     bill,
     form: formReducer,
 })

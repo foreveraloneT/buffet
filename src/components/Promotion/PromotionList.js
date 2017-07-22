@@ -24,21 +24,25 @@ const PromotionList = ({
             </div>
             <div className={styles['promotion-list']}>
                 <table className="table">
-                    <tr>
-                        <th style={{width:"5%"}}>#</th>
-                        <th style={{width:"15%"}}>Code</th>
-                        <th style={{width:"10%"}}>Type</th>
-                        <th style={{width:"60%"}}>Detail</th>
-                        <th style={{width:"10%"}}>Status</th>
-                    </tr>
-                    {
-                        promotions.map((promotion, order) => (
-                            <PromotionItem
-                               order={order}
-                               promotion={promotion}  />
-                        ))
-                    }
-
+                    <thead>
+                        <tr>
+                            <th style={{width:"5%"}}>#</th>
+                            <th style={{width:"15%"}}>Code</th>
+                            <th style={{width:"10%"}}>Type</th>
+                            <th style={{width:"60%"}}>Detail</th>
+                            <th style={{width:"10%"}}>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            promotions.map((promotion, order) => (
+                                <PromotionItem
+                                key={promotion.id}
+                                order={order}
+                                promotion={promotion}  />
+                            ))
+                        }
+                    </tbody>
                 </table>
             </div>
         </div>
