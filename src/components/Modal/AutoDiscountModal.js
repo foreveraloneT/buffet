@@ -7,12 +7,43 @@ import { Field, reduxForm } from 'redux-form'
 
 let FormAutoDisCount = ({
     personCount=0,
+    buffetPrice=0,
     promotionList,
 }) => {
+    const checkCondition = ( operator, x, y ) => {
+        switch(operator) {
+            case "==" :
+                return x == y
+            case "!=" :
+                return x != y 
+            case ">" :
+                return x > y 
+            case ">=" : 
+                return x >= y
+            case "<" :
+                return x < y
+            case "<=" :
+                return x <= y
+            default :
+                return false
+        }
+    }
+
+    const canUsePromotion = (promotion) => {
+        if (promotion.have_condition) {
+            return promotion.condition.reduce((canUse, subCondition) => {
+                const { field, operator, value } = subCondition
+                const fieldValue = field === "total_price" ? buffetPrice * personCount : personCount
+                return canUse && checkCondition(operator, Number(fieldValue), Number(value)) 
+            }, true)
+        }
+        return true
+    }
+    
     const promotionCanUse = promotionList.map((promotion) => {
         const { id, code, _code, use_per, need_coupon } = promotion
         const maxCoupon = use_per.unit === "bill" ? 1 : Math.floor(personCount/use_per.value)
-        return need_coupon && maxCoupon > 0 ?
+        return need_coupon && maxCoupon && canUsePromotion(promotion) > 0 ?
         (
             <div key={id}>
                 <label>{code} (max = {maxCoupon})</label>
@@ -47,6 +78,7 @@ let FormAutoDisCount = ({
 FormAutoDisCount.propTypes = {
     personCount: PropTypes.number,
     promotionList: PropTypes.array.isRequired,
+    buffetPrice: PropTypes.number,
 }
 
 FormAutoDisCount = reduxForm({
@@ -56,6 +88,7 @@ FormAutoDisCount = reduxForm({
 const AutoDiscountModal = ({
     show=true,
     personCount=0,
+    buffetPrice=0,
     onClose,
     onCancel,
     onSubmit,
@@ -86,6 +119,7 @@ const AutoDiscountModal = ({
                     </p>
                     <FormAutoDisCount
                         personCount={personCount}
+                        buffetPrice={buffetPrice}
                         promotionList={promotionList}
                         initialValues={initialValues} />
                 </div>
@@ -106,6 +140,7 @@ const AutoDiscountModal = ({
 AutoDiscountModal.propTypes = {
     show: PropTypes.bool.isRequired,
     personCount: PropTypes.number,
+    buffetPrice: PropTypes.number,
     onClose: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
@@ -116,6 +151,7 @@ class AutoDiscountModalContainer extends Component {
 
     static propTypes = {
         show: PropTypes.bool.isRequired,
+        buffetPrice: PropTypes.number,
         personCount: PropTypes.number.isRequired,
         currentForm: PropTypes.object,
         onClose: PropTypes.func.isRequired,
@@ -131,7 +167,7 @@ class AutoDiscountModalContainer extends Component {
     }
 
     render() {
-        const {show, onClose, onCancel , promotionList, personCount} = this.props
+        const {show, onClose, onCancel , promotionList, personCount, buffetPrice} = this.props
 
         return (
             <AutoDiscountModal
@@ -140,7 +176,8 @@ class AutoDiscountModalContainer extends Component {
                 onCancel={onCancel}
                 onSubmit={this.submitForm}
                 promotionList={promotionList}
-                personCount={personCount} />
+                personCount={personCount}
+                buffetPrice={buffetPrice} />
         )
     }
 }
@@ -148,7 +185,8 @@ class AutoDiscountModalContainer extends Component {
 const mapStateToProps = (state) => ({
     promotionList: state.promotion,
     personCount: state.billCalculator.personCount,
-    currentForm: state.form.autoDiscount
+    currentForm: state.form.autoDiscount,
+    buffetPrice: state.profile.buffet_price,
 })
 
 export default connect(

@@ -166,7 +166,7 @@
       "auto_discount": false,
       "auto_discount_condition": [],
       "discount": {
-        "value": 50,
+        "value": "50",
         "unit": "percent"
       },
       "use_per": {
@@ -1466,6 +1466,194 @@
       "total": 6426,
       "change": 574,
       "id": 17
+    },
+    {
+      "uid": "ti1otlkeji",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 21,
+        "discount": [
+          {
+            "id": 5,
+            "status": "enable",
+            "code": "LUCKY FOUR",
+            "_code": "LUCKY_FOUR",
+            "detail": "Discount 50% when the bill is over 6,000 Bath and present a coupon \"LUCKY FOUR\" but it exclude all promotion",
+            "type": "single",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_price",
+                "operator": ">=",
+                "value": 6000
+              },
+              {
+                "field": "total_price",
+                "operator": "<=",
+                "value": "10000"
+              }
+            ],
+            "auto_discount": false,
+            "auto_discount_condition": [],
+            "discount": {
+              "value": "50",
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-23T12:18:21+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*21",
+          "price": 9639
+        },
+        {
+          "item": "LUCKY FOUR",
+          "price": -4819.5
+        }
+      ],
+      "cash": 5000,
+      "total": 4819.5,
+      "change": 180.5,
+      "id": 18
+    },
+    {
+      "uid": "oqry5l3xnc",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 23,
+        "discount": [
+          {
+            "id": 4,
+            "status": "enable",
+            "code": "LUCKY THREE",
+            "_code": "LUCKY_THREE",
+            "detail": "Discount 25% when the bill is over 6,000 Bath but it exclude all promotion",
+            "type": "single",
+            "need_coupon": false,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_price",
+                "operator": ">=",
+                "value": 6000
+              }
+            ],
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 6000
+              }
+            ],
+            "discount": {
+              "value": 25,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-23T12:18:36+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*23",
+          "price": 10557
+        },
+        {
+          "item": "LUCKY THREE",
+          "price": -2639.25
+        }
+      ],
+      "cash": 8000,
+      "total": 7917.75,
+      "change": 82.25,
+      "id": 19
+    },
+    {
+      "uid": "dqbcbl700e",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 22,
+        "discount": [
+          {
+            "id": 5,
+            "status": "enable",
+            "code": "LUCKY FOUR",
+            "_code": "LUCKY_FOUR",
+            "detail": "Discount 50% when the bill is over 6,000 Bath and present a coupon \"LUCKY FOUR\" but it exclude all promotion",
+            "type": "single",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_price",
+                "operator": ">=",
+                "value": 6000
+              }
+            ],
+            "auto_discount": false,
+            "auto_discount_condition": [],
+            "discount": {
+              "value": "50",
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-23T12:19:10+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*22",
+          "price": 10098
+        },
+        {
+          "item": "LUCKY FOUR",
+          "price": -5049
+        }
+      ],
+      "cash": 6000,
+      "total": 5049,
+      "change": 951,
+      "id": 20
     }
   ],
   "seat": [],

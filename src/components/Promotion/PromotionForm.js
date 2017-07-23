@@ -9,7 +9,6 @@ const boolNormalize = value => (
     value === "true" || value === true
 )
 
-
 // Component
 const OperatorOptionField = ({
     name="",
@@ -151,7 +150,7 @@ const renderConditionList = ({ fields }) => (
 
         <li style={{textAlign:"center"}}>
             <button
-                className="btn btn-primary"
+                className="btn btn-default btn-sm"
                 type="button"
                 onClick={() => fields.push({})} >
                 <FontAwesome

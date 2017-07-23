@@ -15,11 +15,11 @@
 }
 
  :local(.close) {
-    color: #cc0000;
+    color: #555;
     cursor: pointer;
 }
 
 :local(.close:hover),
 :local(.close:focus) {
-    color: #e60000;
+    color: #666;
 } 
