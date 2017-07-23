@@ -7,6 +7,7 @@ import BillDetail from './components/App/BillDetail'
 import Promotion from './components/Promotion/Promotion'
 import PromotionList from './components/Promotion/PromotionList'
 import PromotionDetail from './components/Promotion/PromotionDetail'
+import PromotionNew from './components/Promotion/PromotionNew'
 
 export default () => {
     return (
@@ -23,6 +24,9 @@ export default () => {
                     path='/promotion'
                     component={Promotion} >
                     <IndexRoute component={PromotionList} />
+                    <Route
+                        path='/promotion/new'
+                        component={PromotionNew} />
                     <Route 
                         path='/promotion/:id'
                         component={PromotionDetail} />

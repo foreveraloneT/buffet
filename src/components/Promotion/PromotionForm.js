@@ -163,7 +163,7 @@ const renderConditionList = ({ fields }) => (
 )
 
 let PromotionForm = ({
-
+    changeToCreate=false,
 }) => {
     return (
         <form>
@@ -171,7 +171,11 @@ let PromotionForm = ({
             <Field component="input" type="hidden" name="_code" />
 
             <label htmlFor="name">Promotion Code</label>
-            <Field component="input" type="text" className="form-input" name="code" disabled/>
+            {   
+                changeToCreate ? 
+                    <Field component="input" type="text" className="form-input" name="code" /> :
+                    <Field component="input" type="text" className="form-input" name="code" disabled/>                    
+            }
             <hr />
 
             <label htmlFor="name">Promotion Detail</label>
@@ -234,13 +238,13 @@ let PromotionForm = ({
             </div>
             <hr />
 
-            <label>Promotion Condition</label>
+            <label>Promotion Condition <i>(optional)</i></label>
             <FieldArray 
                 name="condition"
                 component={renderConditionList} />
             <hr />
 
-            <label>Automatic Discount</label>
+            <label>Automatic Discount <i>(optional)</i></label>
             <FieldArray 
                 name="auto_discount_condition"
                 component={renderConditionList} />
@@ -266,6 +270,10 @@ let PromotionForm = ({
 
         </form>
     )
+}
+
+PromotionForm.propTypes = {
+    changeToCreate: PropTypes.bool,
 }
 
 export default reduxForm({

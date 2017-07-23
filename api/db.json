@@ -173,6 +173,54 @@
         "value": 1,
         "unit": "bill"
       }
+    },
+    {
+      "status": "disable",
+      "_code": "LUCKY_SECRET",
+      "have_condition": false,
+      "condition": [],
+      "auto_discount": false,
+      "auto_discount_condition": [],
+      "code": "LUCKY SECRET",
+      "detail": "Free buffet for 1 bill",
+      "type": "single",
+      "need_coupon": true,
+      "discount": {
+        "value": "100",
+        "unit": "percent"
+      },
+      "use_per": {
+        "value": "1",
+        "unit": "bill"
+      },
+      "id": 6
+    },
+    {
+      "status": "disable",
+      "_code": "SPECIAL_JULY",
+      "have_condition": false,
+      "condition": [],
+      "auto_discount": true,
+      "auto_discount_condition": [
+        {
+          "field": "total_person",
+          "operator": ">=",
+          "value": "1"
+        }
+      ],
+      "code": "SPECIAL JULY",
+      "detail": "Discount 5% for customer in July 2017",
+      "type": "multiple",
+      "need_coupon": false,
+      "discount": {
+        "value": "5",
+        "unit": "percent"
+      },
+      "use_per": {
+        "value": "1",
+        "unit": "bill"
+      },
+      "id": 7
     }
   ],
   "bill": [
@@ -1654,6 +1702,65 @@
       "total": 5049,
       "change": 951,
       "id": 20
+    },
+    {
+      "uid": "y2383bgxbg",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": [
+          {
+            "status": "enable",
+            "_code": "SPECIAL_JULY",
+            "have_condition": false,
+            "condition": [],
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": "1"
+              }
+            ],
+            "code": "SPECIAL JULY",
+            "detail": "Discount 5% for customer in July 2017",
+            "type": "multiple",
+            "need_coupon": false,
+            "discount": {
+              "value": "5",
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": "1",
+              "unit": "bill"
+            },
+            "id": 7
+          }
+        ]
+      },
+      "datetime_create": "2017-07-23T13:36:25+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        },
+        {
+          "item": "SPECIAL JULY",
+          "price": -22.950000000000003
+        }
+      ],
+      "cash": 450,
+      "total": 436.05,
+      "change": 13.949999999999989,
+      "id": 21
     }
   ],
   "seat": [],

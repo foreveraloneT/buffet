@@ -13,7 +13,7 @@ const PromotionList = ({
         <div>
             <p className="topic">Promotion</p>
             <div style={{textAlign: "right"}}>
-                <a href="#">
+                <a href="/promotion/new">
                     <button className="btn btn-primary">
                         <FontAwesome 
                             name="plus"
