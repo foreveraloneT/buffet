@@ -20,9 +20,9 @@ $ npm install -g json-server@0.10.0
 * Promotion Code UI \(in progress\)
   * List all promotion \(complete\) 
   * Change status of promotion \(complete\)
-  * Show promotion detail
+  * Show promotion detail \(complete\)
   * Create new promotion
-  * Update promotion
+  * Update promotion \(complete\)
 * Reservation UI \(in progress\)
   * Reservation system
   * List customer's reservation
