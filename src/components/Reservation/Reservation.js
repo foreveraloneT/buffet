@@ -92,7 +92,7 @@ class ReservationContainer extends Component {
             seat_count: Number(countSeat),
             datetime_reserve_gte: moment(reservationTime).subtract(2, "hours").format(),
             datetime_reserve_lte: moment(reservationTime).add(2, "hours").format(),
-            status_ne: "cancel", // pending, cancel, clear
+            status_ne: "cancel", // pending, cancel, progress
         }
         getReservationList(params)
         this.setState({countSeat: Number(countSeat), alreadySearch: true})

@@ -80,3 +80,25 @@
     }
 }
 /*`*/
+
+/*reservation modal*/
+:local(.block) {
+    padding: 10px 0px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+:local(.topic) {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+:local(.detail) {
+    width: 100%;
+}
+
+:local(.detail div) {
+    padding: 5px 10px;
+}

@@ -10,6 +10,7 @@ import PromotionDetail from './components/Promotion/PromotionDetail'
 import PromotionNew from './components/Promotion/PromotionNew'
 import ReservationApp from './components/Reservation/ReservationApp'
 import Reservation from './components/Reservation/Reservation'
+import ReservationList from './components/Reservation/ReservationList'
 
 export default () => {
     return (
@@ -36,6 +37,7 @@ export default () => {
                 <Route
                     path="/reservation"
                     component={ReservationApp} >
+                    <IndexRoute component={ReservationList} />
                     <Route
                         path="/reservation/new"
                         component={Reservation} />

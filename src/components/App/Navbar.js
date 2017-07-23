@@ -18,7 +18,7 @@ const Navbar = ({
             <a href="/profile">Management</a>
             <a href="/">Bill</a>
             <a href="/promotion">Promotion</a>
-            <a href="#">Reservation</a>
+            <a href="/reservation">Reservation</a>
             <a href="javascript:void(0);" className={styles['icon']} onClick={() => onClickMenu()}>&#9776;</a>
         </nav>
     </div>
