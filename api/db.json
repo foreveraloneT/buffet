@@ -1901,124 +1901,173 @@
   "table": [
     {
       "id": 1,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 2,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 3,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 4,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 5,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 6,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 7,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 8,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 9,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 10,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 11,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 12,
-      "zone" : "A",
-      "seat_count" : 1
+      "zone": "A",
+      "seat_count": 1
     },
     {
       "id": 13,
-      "zone" : "Panty",
-      "seat_count" : 8
+      "zone": "Panty",
+      "seat_count": 8
     },
     {
       "id": 14,
-      "zone" : "Panty",
-      "seat_count" : 8
+      "zone": "Panty",
+      "seat_count": 8
     },
     {
       "id": 15,
-      "zone" : "Panty",
-      "seat_count" : 4
+      "zone": "Panty",
+      "seat_count": 4
     },
     {
       "id": 16,
-      "zone" : "Panty",
-      "seat_count" : 4
+      "zone": "Panty",
+      "seat_count": 4
     },
     {
       "id": 17,
-      "zone" : "Panty",
-      "seat_count" : 4
+      "zone": "Panty",
+      "seat_count": 4
     },
     {
       "id": 18,
-      "zone" : "Panty",
-      "seat_count" : 4
+      "zone": "Panty",
+      "seat_count": 4
     },
     {
       "id": 19,
-      "zone" : "Panty",
-      "seat_count" : 4
+      "zone": "Panty",
+      "seat_count": 4
     },
     {
       "id": 20,
-      "zone" : "Panty",
-      "seat_count" : 4
+      "zone": "Panty",
+      "seat_count": 4
     },
     {
       "id": 21,
-      "zone" : "Panty",
-      "seat_count" : 2
+      "zone": "Panty",
+      "seat_count": 2
     },
     {
       "id": 22,
-      "zone" : "Panty",
-      "seat_count" : 2
+      "zone": "Panty",
+      "seat_count": 2
     },
     {
       "id": 23,
-      "zone" : "Panty",
-      "seat_count" : 2
+      "zone": "Panty",
+      "seat_count": 2
     },
     {
       "id": 24,
-      "zone" : "Panty",
-      "seat_count" : 2
+      "zone": "Panty",
+      "seat_count": 2
     }
   ],
-  "reservation": []
+  "reservation": [
+    {
+      "uid": "e9q10pl18o",
+      "seat_count": 8,
+      "table": {
+        "id": 13,
+        "zone": "Panty",
+        "seat_count": 8
+      },
+      "customer_name": "John",
+      "customer_count": 8,
+      "customer_telephone": "0811111111",
+      "datetime_create": "2017-07-23T22:37:18+07:00",
+      "datetime_reserve": "2017-07-23T23:00:00+07:00",
+      "status": "pending",
+      "id": 1
+    },
+    {
+      "uid": "8wbdi3cwac",
+      "seat_count": 8,
+      "table": {
+        "id": 14,
+        "zone": "Panty",
+        "seat_count": 8
+      },
+      "customer_name": "Jenny",
+      "customer_count": 7,
+      "customer_telephone": "0877778888",
+      "datetime_create": "2017-07-23T22:39:39+07:00",
+      "datetime_reserve": "2017-07-23T23:30:00+07:00",
+      "status": "pending",
+      "id": 2
+    },
+    {
+      "uid": "csg6b9wy9w",
+      "seat_count": 2,
+      "table": {
+        "id": 21,
+        "zone": "Panty",
+        "seat_count": 2
+      },
+      "customer_name": "Tee",
+      "customer_count": 2,
+      "customer_telephone": "0878887788",
+      "datetime_create": "2017-07-23T22:40:47+07:00",
+      "datetime_reserve": "2017-07-23T23:00:00+07:00",
+      "status": "pending",
+      "id": 3
+    }
+  ]
 }

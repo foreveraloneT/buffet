@@ -24,7 +24,7 @@ $ npm install -g json-server@0.10.0
   * Create new promotion \(complete\)
   * Update promotion \(complete\)
 * Reservation UI \(in progress\)
-  * Reservation system
+  * Reservation system \(complete\)
   * List customer's reservation
   * Change status of reservation
 

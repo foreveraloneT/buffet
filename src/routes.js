@@ -8,6 +8,8 @@ import Promotion from './components/Promotion/Promotion'
 import PromotionList from './components/Promotion/PromotionList'
 import PromotionDetail from './components/Promotion/PromotionDetail'
 import PromotionNew from './components/Promotion/PromotionNew'
+import ReservationApp from './components/Reservation/ReservationApp'
+import Reservation from './components/Reservation/Reservation'
 
 export default () => {
     return (
@@ -21,15 +23,22 @@ export default () => {
                     path="/profile"
                     component={ Profile } />
                 <Route 
-                    path='/promotion'
+                    path="/promotion"
                     component={Promotion} >
                     <IndexRoute component={PromotionList} />
                     <Route
-                        path='/promotion/new'
+                        path="/promotion/new"
                         component={PromotionNew} />
                     <Route 
-                        path='/promotion/:id'
+                        path="/promotion/:id"
                         component={PromotionDetail} />
+                </Route>
+                <Route
+                    path="/reservation"
+                    component={ReservationApp} >
+                    <Route
+                        path="/reservation/new"
+                        component={Reservation} />
                 </Route>
             </Route>
             <Route

@@ -6,6 +6,10 @@ export const PROMOTION_ENDPOINT = `${BASE_API}/promotion`
 
 export const BILL_ENDPOINT = `${BASE_API}/bill`
 
+export const TABLE_ENDPOINT = `${BASE_API}/table`
+
+export const RESERVATION_ENDPOINT = `${BASE_API}/reservation`
+
 export const getParamsQuery = (params = {}) => (
         params == {} ? '' :
         Object.keys(params).reduce((query, param) => (

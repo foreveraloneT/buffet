@@ -1,0 +1,15 @@
+:local(.table-item) {
+    background: white;
+    margin: 20px 10px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+:local(.no-table) {
+    color: red;
+    font-size: 1.5em;
+    padding: 20px;
+    text-align: center;
+}
