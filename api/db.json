@@ -198,8 +198,14 @@
     {
       "status": "disable",
       "_code": "SPECIAL_JULY",
-      "have_condition": false,
-      "condition": [],
+      "have_condition": true,
+      "condition": [
+        {
+          "field": "total_person",
+          "operator": ">=",
+          "value": "1"
+        }
+      ],
       "auto_discount": true,
       "auto_discount_condition": [
         {
@@ -221,6 +227,39 @@
         "unit": "bill"
       },
       "id": 7
+    },
+    {
+      "status": "disable",
+      "_code": "SPECIAL_AUGUST",
+      "have_condition": true,
+      "condition": [
+        {
+          "field": "total_person",
+          "operator": ">=",
+          "value": "2"
+        }
+      ],
+      "auto_discount": true,
+      "auto_discount_condition": [
+        {
+          "field": "total_person",
+          "operator": ">=",
+          "value": "2"
+        }
+      ],
+      "code": "SPECIAL AUGUST",
+      "detail": "Discount 20% for customer in August 2017 for 2 or more customer",
+      "type": "multiple",
+      "need_coupon": false,
+      "discount": {
+        "value": "20",
+        "unit": "percent"
+      },
+      "use_per": {
+        "value": "1",
+        "unit": "bill"
+      },
+      "id": 8
     }
   ],
   "bill": [
@@ -1761,8 +1800,225 @@
       "total": 436.05,
       "change": 13.949999999999989,
       "id": 21
+    },
+    {
+      "uid": "ly897s0ija",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 3,
+        "discount": [
+          {
+            "id": 1,
+            "status": "enable",
+            "code": "LUCKY ONE",
+            "_code": "LUCKY_ONE",
+            "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": false,
+            "condition": [],
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 1000
+              }
+            ],
+            "discount": {
+              "value": 15,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          },
+          {
+            "status": "enable",
+            "_code": "SPECIAL_AUGUST",
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": "2"
+              }
+            ],
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": "2"
+              }
+            ],
+            "code": "SPECIAL AUGUST",
+            "detail": "Discount 20% for customer in August 2017 for 2 or more customer",
+            "type": "multiple",
+            "need_coupon": false,
+            "discount": {
+              "value": "20",
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": "1",
+              "unit": "bill"
+            },
+            "id": 8
+          }
+        ]
+      },
+      "datetime_create": "2017-07-23T13:47:42+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*3",
+          "price": 1377
+        },
+        {
+          "item": "LUCKY ONE",
+          "price": -206.54999999999998
+        },
+        {
+          "item": "SPECIAL AUGUST",
+          "price": -275.40000000000003
+        }
+      ],
+      "cash": 1000,
+      "total": 895.05,
+      "change": 104.95000000000005,
+      "id": 22
     }
   ],
-  "seat": [],
+  "table": [
+    {
+      "id": 1,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 2,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 3,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 4,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 5,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 6,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 7,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 8,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 9,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 10,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 11,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 12,
+      "zone" : "A",
+      "seat_count" : 1
+    },
+    {
+      "id": 13,
+      "zone" : "Panty",
+      "seat_count" : 8
+    },
+    {
+      "id": 14,
+      "zone" : "Panty",
+      "seat_count" : 8
+    },
+    {
+      "id": 15,
+      "zone" : "Panty",
+      "seat_count" : 4
+    },
+    {
+      "id": 16,
+      "zone" : "Panty",
+      "seat_count" : 4
+    },
+    {
+      "id": 17,
+      "zone" : "Panty",
+      "seat_count" : 4
+    },
+    {
+      "id": 18,
+      "zone" : "Panty",
+      "seat_count" : 4
+    },
+    {
+      "id": 19,
+      "zone" : "Panty",
+      "seat_count" : 4
+    },
+    {
+      "id": 20,
+      "zone" : "Panty",
+      "seat_count" : 4
+    },
+    {
+      "id": 21,
+      "zone" : "Panty",
+      "seat_count" : 2
+    },
+    {
+      "id": 22,
+      "zone" : "Panty",
+      "seat_count" : 2
+    },
+    {
+      "id": 23,
+      "zone" : "Panty",
+      "seat_count" : 2
+    },
+    {
+      "id": 24,
+      "zone" : "Panty",
+      "seat_count" : 2
+    }
+  ],
   "reservation": []
 }
