@@ -28,6 +28,8 @@ $ npm install -g json-server@0.10.0
   * List customer's reservation
   * Change status of reservation
 
+Note: There are no form validation in all feature
+
 ## How to run application
 
 1. Install dependencies package
