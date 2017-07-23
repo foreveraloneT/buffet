@@ -23,10 +23,10 @@ $ npm install -g json-server@0.10.0
   * Show promotion detail \(complete\)
   * Create new promotion \(complete\)
   * Update promotion \(complete\)
-* Reservation UI \(in progress\)
+* Reservation UI \(complete\)
   * Reservation system \(complete\)
-  * List customer's reservation
-  * Change status of reservation
+  * List customer's reservation \(complete\)
+  * Change status of reservation \(complete\)
 
 Note: There are no form validation in all feature
 
