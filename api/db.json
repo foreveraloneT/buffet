@@ -1896,6 +1896,313 @@
       "total": 895.05,
       "change": 104.95000000000005,
       "id": 22
+    },
+    {
+      "uid": "qmxd8h93ug",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 1,
+        "discount": [
+          {
+            "id": 1,
+            "status": "enable",
+            "code": "LUCKY ONE",
+            "_code": "LUCKY_ONE",
+            "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": false,
+            "condition": [],
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 1000
+              }
+            ],
+            "discount": {
+              "value": 15,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-24T01:43:45+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*1",
+          "price": 459
+        },
+        {
+          "item": "LUCKY ONE",
+          "price": -68.85
+        }
+      ],
+      "cash": 400,
+      "total": 390.15,
+      "change": 9.850000000000023,
+      "id": 23
+    },
+    {
+      "uid": "h4nx98aa7w",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 14,
+        "discount": [
+          {
+            "id": 4,
+            "status": "enable",
+            "code": "LUCKY THREE",
+            "_code": "LUCKY_THREE",
+            "detail": "Discount 25% when the bill is over 6,000 Bath but it exclude all promotion",
+            "type": "single",
+            "need_coupon": false,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_price",
+                "operator": ">=",
+                "value": 6000
+              }
+            ],
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 6000
+              }
+            ],
+            "discount": {
+              "value": 25,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-24T02:52:44+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*14",
+          "price": 6426
+        },
+        {
+          "item": "LUCKY THREE",
+          "price": -1606.5
+        }
+      ],
+      "cash": 5000,
+      "total": 4819.5,
+      "change": 180.5,
+      "id": 24
+    },
+    {
+      "uid": "4q6mitffgo",
+      "buffet_price": 459,
+      "profile": {
+        "id": 1,
+        "name": "Death Star Buffet @Siam Paragon",
+        "buffet_price": 459,
+        "address": "G floor, Siam Paragon, Bangkok, Thailand",
+        "telephone": "02-123-4567",
+        "email": "anakin.s@deathstar.com"
+      },
+      "bill_detail": {
+        "personCount": 15,
+        "discount": [
+          {
+            "id": 1,
+            "status": "enable",
+            "code": "LUCKY ONE",
+            "_code": "LUCKY_ONE",
+            "detail": "Discount 15% for coupon code \"LUCKY ONE\" or the bill is more than 1,000 Bath",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": false,
+            "condition": [],
+            "auto_discount": true,
+            "auto_discount_condition": [
+              {
+                "field": "total_price",
+                "operator": ">",
+                "value": 1000
+              }
+            ],
+            "discount": {
+              "value": 15,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 1,
+              "unit": "bill"
+            }
+          },
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "auto_discount_condition": [],
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 2,
+            "status": "enable",
+            "code": "4PAY3",
+            "_code": "4PAY3",
+            "detail": "Come 4 pay 3 for coupon code \"4PAY3\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 4
+              }
+            ],
+            "auto_discount": false,
+            "auto_discount_condition": [],
+            "discount": {
+              "value": 459,
+              "unit": "bath"
+            },
+            "use_per": {
+              "value": 4,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "auto_discount_condition": [],
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          },
+          {
+            "id": 3,
+            "status": "enable",
+            "code": "LUCKY TWO",
+            "_code": "LUCKY_TWO",
+            "detail": "Discount 20% for 2 customer when they present a coupon code as \"LUCKY TWO\"",
+            "type": "multiple",
+            "need_coupon": true,
+            "have_condition": true,
+            "condition": [
+              {
+                "field": "total_person",
+                "operator": ">=",
+                "value": 2
+              }
+            ],
+            "auto_discount": false,
+            "auto_discount_condition": [],
+            "discount": {
+              "value": 20,
+              "unit": "percent"
+            },
+            "use_per": {
+              "value": 2,
+              "unit": "person"
+            }
+          }
+        ]
+      },
+      "datetime_create": "2017-07-24T02:53:05+07:00",
+      "lines": [
+        {
+          "item": "BUFFET*15",
+          "price": 6885
+        },
+        {
+          "item": "LUCKY ONE",
+          "price": -1032.75
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        },
+        {
+          "item": "4PAY3",
+          "price": -459
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        },
+        {
+          "item": "LUCKY TWO",
+          "price": -183.60000000000002
+        }
+      ],
+      "cash": 5000,
+      "total": 4567.049999999999,
+      "change": 432.9500000000007,
+      "id": 25
     }
   ],
   "table": [
@@ -2034,7 +2341,7 @@
       "customer_telephone": "0811111111",
       "datetime_create": "2017-07-23T22:37:18+07:00",
       "datetime_reserve": "2017-07-23T23:00:00+07:00",
-      "status": "pending",
+      "status": "progress",
       "id": 1
     },
     {
@@ -2066,8 +2373,56 @@
       "customer_telephone": "0878887788",
       "datetime_create": "2017-07-23T22:40:47+07:00",
       "datetime_reserve": "2017-07-23T23:00:00+07:00",
-      "status": "pending",
+      "status": "cancel",
       "id": 3
+    },
+    {
+      "uid": "x5755wrx6m",
+      "seat_count": 4,
+      "table": {
+        "id": 15,
+        "zone": "Panty",
+        "seat_count": 4
+      },
+      "customer_name": "Jay",
+      "customer_count": 3,
+      "customer_telephone": "0891258989",
+      "datetime_create": "2017-07-24T01:44:47+07:00",
+      "datetime_reserve": "2017-07-24T11:00:00+07:00",
+      "status": "cancel",
+      "id": 4
+    },
+    {
+      "uid": "jqw45k1ei5",
+      "seat_count": 8,
+      "table": {
+        "id": 13,
+        "zone": "Panty",
+        "seat_count": 8
+      },
+      "customer_name": "Jay",
+      "customer_count": 7,
+      "customer_telephone": "0891258989",
+      "datetime_create": "2017-07-24T01:45:39+07:00",
+      "datetime_reserve": "2017-07-24T20:00:00+07:00",
+      "status": "pending",
+      "id": 5
+    },
+    {
+      "uid": "ypg4fwu6dq",
+      "seat_count": 1,
+      "table": {
+        "id": 1,
+        "zone": "A",
+        "seat_count": 1
+      },
+      "customer_name": "Tee",
+      "customer_count": 1,
+      "customer_telephone": "0878887788",
+      "datetime_create": "2017-07-24T02:51:21+07:00",
+      "datetime_reserve": "2017-07-26T11:00:00+07:00",
+      "status": "pending",
+      "id": 6
     }
   ]
 }

@@ -102,3 +102,15 @@
 :local(.detail div) {
     padding: 5px 10px;
 }
+
+:local(.status-tab) {
+    width: 100%;
+    position: relative;
+    min-height: 60px;
+}
+
+:local(.status-tab div) {
+    width: 30%;
+    position: absolute;
+    right: 0
+}

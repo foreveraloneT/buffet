@@ -3,15 +3,12 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './modal.css'
 import moment from 'moment'
+import ReservationStatus from '../Reservation/ReservationStatus'
 
 const ReservationModal = ({
     show=true,
     onClose,
-    reservation={
-        table: {
-            zone:0
-        }
-    },
+    reservation={},
 }) => {
     const {
         id,
@@ -88,6 +85,13 @@ const ReservationModal = ({
                                         <div>
                                             Total Seat: {table.seat_count} seat(s)
                                         </div>
+                                    </div>
+                                </div>
+
+                                <div className={styles["status-tab"]}>
+                                    <div>
+                                        <ReservationStatus
+                                            reservation={reservation} />
                                     </div>
                                 </div>
                             </div>

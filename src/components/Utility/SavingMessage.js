@@ -5,7 +5,8 @@ import FontAwesome from 'react-fontawesome'
 import classNames from 'classnames'
 import {
     EDIT_PROFILE_SUCCESS,
-    UPDATE_PROMOTION_SUCCESS
+    UPDATE_PROMOTION_SUCCESS,
+    UPDATE_RESERVATION_SUCCESS,
 } from '../../constants/actionTypes'
 import styles from './message.css'
 
@@ -43,7 +44,8 @@ class SavingMessageContainer extends Component {
 
     isShow = () => {
         const { showMessage } = this.props
-        if (showMessage) {
+        const { show } = this.state
+        if (showMessage && ! show) {
             this.setState({show: true})
         }
     }
@@ -73,7 +75,8 @@ class SavingMessageContainer extends Component {
 const mapStateToProps = (state) => ({
     showMessage: [
         EDIT_PROFILE_SUCCESS,
-        UPDATE_PROMOTION_SUCCESS
+        UPDATE_PROMOTION_SUCCESS,
+        UPDATE_RESERVATION_SUCCESS
     ].indexOf(state.app) !== -1,
 })
 
