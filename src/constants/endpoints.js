@@ -10,6 +10,8 @@ export const TABLE_ENDPOINT = `${BASE_API}/table`
 
 export const RESERVATION_ENDPOINT = `${BASE_API}/reservation`
 
+export const PLAYER_ENDPOINT = `${BASE_API}/nba`
+
 export const getParamsQuery = (params = {}) => (
         params == {} ? '' :
         Object.keys(params).reduce((query, param) => (

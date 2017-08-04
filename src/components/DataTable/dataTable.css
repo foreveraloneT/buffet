@@ -61,6 +61,7 @@
 :local(.under-menu) {
     width: 100%;
     display: inline-flex;
+    margin-bottom: 20px;
 }
 
 :local(.pagination a:link),
@@ -72,7 +73,7 @@
 }
 
 :local(.selector) {
-    margin: 23px 0px;
+    margin: 5px 0px;
 }
 
 :local(.row-select) {

@@ -18,47 +18,10 @@ export const Pagination = ({
             <div 
                 className={classNames(styles["paging"], {[styles["active"]]: page == currentPage})}
                 onClick={() => onChangePage(page) } >
-                <a href="#">
-                    {page}
-                </a>
+                {page}
             </div>
         )
     }
-    // const GenerateCurrent = (current) => {
-    //     if (pageCount > showMax + 3) {
-    //         if ( current === showMax )
-    //             return (
-    //                 <PageButton page={current + 1} />
-    //             )
-    //         if ( current === pageCount - 2 )
-    //             return (
-    //                 <PageButton page={current - 1} />
-    //             )
-    //         else if ( current > showMax && current <= pageCount - 5 )
-    //             return (
-    //                 <span>
-    //                     {
-    //                         _.times(3).map((i) => (
-    //                             <PageButton page={current + i} />
-    //                         ))
-    //                     }
-    //                 </span>
-    //             )
-    //         else if ( current > pageCount - 5 && current < pageCount - 2 )
-    //             return (
-    //                 <span>
-    //                     {
-    //                         _.times(pageCount - 2 - current).map((i) => (
-    //                             <PageButton page={current + i} />
-    //                         ))
-    //                     }
-    //                 </span>
-    //             )
-    //     }
-    //     else {
-    //         return null
-    //     }
-    // }
 
     const GenerateCurrent = () => {
         if (pageCount > showMax + 3) {
@@ -118,9 +81,7 @@ export const Pagination = ({
             <div 
                 className={classNames(styles["prev"], {[styles['disable']]: currentPage === 1})} 
                 onClick={ () => onChangePage(currentPage - 1) }>
-                <a href="#">
-                    prev
-                </a>
+                prev
             </div>
 
             {
@@ -157,9 +118,7 @@ export const Pagination = ({
                 className={styles["next"]}
                 className={classNames(styles["next"], {[styles['disable']]: currentPage === pageCount})}  
                 onClick={ () => onChangePage(currentPage + 1) } >
-                <a href="#">
-                    next
-                </a>
+                next
             </div>
         </div>
     )
@@ -177,13 +136,13 @@ const DataTable = ({
     onChangePage,
     onChangeSorting,
     status,
+    showIndex,
+    onClickRow,
 }) => {
     const fields = Object.values(showFields)
 
     const getSortingSymbol = (field) => {
         if ( sortableFields.indexOf(field) != -1) {
-            console.log(showFields[field])
-            console.log(status)
             if (showFields[field] != status.sortBy)
                 return (
                     <FontAwesome 
@@ -208,8 +167,34 @@ const DataTable = ({
 
     return (
         <div>
+        <div className={styles["selector"]} style={{ width: "100%"}}>
+                Show
+                <select 
+                    className={styles["row-select"]}
+                    onChange={(e) => onChangeLimit(e)} >
+                    {
+                        step.map((num) => (
+                            <option 
+                                value={num} 
+                                key={num}>
+                                {num}
+                            </option>
+                        ))
+                    }
+                </select>
+                row(s)
+            </div>
             <table className={tableClassName}>
                 <tr>
+                    {
+                        showIndex ? 
+                            (
+                                <th>
+                                    #
+                                </th>
+                            ) :
+                            null
+                    }
                     {
                         Object.keys(showFields).map((header, index) => (
                             <th className={styles["table-header"]} key={ header }>
@@ -226,8 +211,15 @@ const DataTable = ({
                     }
                 </tr>
                 {
-                    items.map((item) => (
-                        <tr>
+                    items.map((item, index) => (
+                        <tr onClick={ () => onClickRow(item) }>
+                            {
+                                showIndex ? 
+                                    (
+                                        <td>{ index + 1 + (status.page - 1) * status.limit }</td>
+                                    ) :
+                                    null
+                            }
                             {
                                 fields.map((field) => (
                                     <td>
@@ -240,22 +232,8 @@ const DataTable = ({
                 }
             </table>
             <div className={styles["under-menu"]}>
-                <div className={styles["selector"]} style={{ width: "40%"}}>
-                    Show
-                    <select 
-                        className={styles["row-select"]}
-                        onChange={(e) => onChangeLimit(e)} >
-                        {
-                            step.map((num) => (
-                                <option 
-                                    value={num} 
-                                    key={num}>
-                                    {num}
-                                </option>
-                            ))
-                        }
-                    </select>
-                    row(s)
+                <div style={{ width: "40%", marginTop: "33px"}}>
+                    Show {1 + (status.page - 1) * status.limit } to {Math.min(total, status.limit + (status.page - 1) * status.limit)} from {total} row(s)
                 </div>
                 <div style={{ width: "60%", textAlign: "right" }}>
                     <Pagination
@@ -277,6 +255,11 @@ class DataTableContainer extends Component {
         showFields: PropTypes.array.isRequired,
         sortableFields: PropTypes.array.isRequired,
         step: PropTypes.array.isRequired,
+        debug: PropTypes.bool,
+        onChangeOption: PropTypes.func,
+        showIndex: PropTypes.bool,
+        onClickRow: PropTypes.func,
+        initialState: PropTypes.object,
     }
     
     state = {
@@ -288,8 +271,9 @@ class DataTableContainer extends Component {
 
     changePage = (page) => {
         const maxPage = Math.ceil(this.props.total / this.state.limit)
-        if (page >= 1 && page <= maxPage )
+        if (page >= 1 && page <= maxPage ) {
             this.setState({page})
+        }
     }
 
     changeLimit = (event) => {
@@ -299,17 +283,49 @@ class DataTableContainer extends Component {
     }
 
     changeSorting = (sortBy) => {
-        const orderBy = this.state.orderBy === "asc" ? "desc" : "asc"
+        let orderBy = "" 
+
+        if (sortBy !== this.state.sortBy) {
+            orderBy = "desc"
+        }
+        else {
+            orderBy = this.state.orderBy === "asc" ? "desc" : "asc"
+        }
         this.setState({sortBy, orderBy})
     }
-    
+
+    changeOption = () => {
+        this.props.onChangeOption(this.state)
+    }
+
+    clickDataRow = (data) => {
+        return this.props.onClickRow(data)
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        const { page, limit, sortBy, orderBy } = this.state
+        if (! (
+            page === prevState.page &&
+            limit === prevState.limit &&
+            sortBy === prevState.sortBy &&
+            orderBy === prevState.orderBy
+        )) {
+            this.changeOption()
+        }
+    }
+
     componentDidMount() {
-        const limit = this.props.step[0]
-        this.setState({limit})
+        if (this.props.initialState) {
+            this.setState(this.props.initialState)
+        }
+        else {
+            const limit = this.props.step[0]
+            this.setState({limit})
+        }
     }
 
     render() {
-        const { tableClassName, items, total, showFields, sortableFields, step } = this.props
+        const { debug, tableClassName, items, total, showFields, sortableFields, step, showIndex } = this.props
         const { page, limit, sortBy, orderBy } = this.state
         const status = { page, limit, sortBy, orderBy }
         return (
@@ -325,10 +341,14 @@ class DataTableContainer extends Component {
                     status={status}
                     onChangeLimit={this.changeLimit}
                     onChangePage={this.changePage}
-                    onChangeSorting={this.changeSorting} />
+                    onChangeSorting={this.changeSorting}
+                    showIndex={showIndex}
+                    onClickRow={this.clickDataRow} />
 
                     {
-                        JSON.stringify(this.state, null, '\t')
+                        debug ?
+                            JSON.stringify(this.state, null, '\t') : 
+                            null
                     }
             </div>
         )

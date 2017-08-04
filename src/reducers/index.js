@@ -7,6 +7,7 @@ import bill from './bill'
 import promotionDetail from './promotionDetail'
 import table from './table'
 import reservation from './reservation'
+import player from './player'
 import { reducer as formReducer } from 'redux-form'
 
 export default combineReducers({
@@ -18,5 +19,6 @@ export default combineReducers({
     bill,
     table,
     reservation,
+    player,
     form: formReducer,
 })
