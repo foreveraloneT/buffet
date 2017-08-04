@@ -24,41 +24,94 @@ export const Pagination = ({
             </div>
         )
     }
-    const GenerateCurrent = (current) => {
+    // const GenerateCurrent = (current) => {
+    //     if (pageCount > showMax + 3) {
+    //         if ( current === showMax )
+    //             return (
+    //                 <PageButton page={current + 1} />
+    //             )
+    //         if ( current === pageCount - 2 )
+    //             return (
+    //                 <PageButton page={current - 1} />
+    //             )
+    //         else if ( current > showMax && current <= pageCount - 5 )
+    //             return (
+    //                 <span>
+    //                     {
+    //                         _.times(3).map((i) => (
+    //                             <PageButton page={current + i} />
+    //                         ))
+    //                     }
+    //                 </span>
+    //             )
+    //         else if ( current > pageCount - 5 && current < pageCount - 2 )
+    //             return (
+    //                 <span>
+    //                     {
+    //                         _.times(pageCount - 2 - current).map((i) => (
+    //                             <PageButton page={current + i} />
+    //                         ))
+    //                     }
+    //                 </span>
+    //             )
+    //     }
+    //     else {
+    //         return null
+    //     }
+    // }
+
+    const GenerateCurrent = () => {
         if (pageCount > showMax + 3) {
-            if ( current === showMax )
+            if (currentPage === showMax) 
                 return (
-                    <PageButton page={current + 1} />
+                    <PageButton page={ currentPage + 1 } />
                 )
-            if ( current === pageCount - 2 )
+            else if (currentPage > showMax && currentPage <= showMax + 2)
                 return (
-                    <PageButton page={current - 1} />
+                    <span>
+                        {
+                            currentPage > showMax + 1 ? 
+                                <PageButton page={ currentPage - 1 } /> : 
+                                null
+                        }
+                        {
+                            _.times(2).map((i) => (
+                                <PageButton page={ currentPage + i } />
+                            ))
+                        }
+                    </span>
                 )
-            else if ( current > showMax && current <= pageCount - 5 )
+            else if (currentPage === pageCount - 2)
+                return (
+                    <PageButton page={ currentPage - 1 } />
+                )
+            else if (currentPage < pageCount - 2 && currentPage >= pageCount - 4)
+                return (
+                    <span>
+                        {
+                            _.times(2).map((i) => (
+                                <PageButton page={ currentPage - 1 + i } />
+                            ))
+                        }
+                        {
+                            currentPage < pageCount - 3 ?
+                                <PageButton page={ currentPage + 1 } /> :
+                                null
+                        }
+                    </span>
+                )
+            else if (currentPage > showMax + 2 && currentPage < pageCount - 4 )
                 return (
                     <span>
                         {
                             _.times(3).map((i) => (
-                                <PageButton page={current + i} />
-                            ))
-                        }
-                    </span>
-                )
-            else if ( current > pageCount - 5 && current < pageCount - 2 )
-                return (
-                    <span>
-                        {
-                            _.times(pageCount - 2 - current).map((i) => (
-                                <PageButton page={current + i} />
+                                <PageButton page={currentPage - 1 + i} />
                             ))
                         }
                     </span>
                 )
         }
-        else {
-            return null
-        }
-    }
+    } 
 
     return (
         <div className={styles["pagination"]}>
@@ -77,18 +130,18 @@ export const Pagination = ({
             }
 
             {
-                pageCount <= showMax + 3 || currentPage <= showMax + 1 ? null : 
+                pageCount <= showMax + 3 || currentPage <= showMax + 2 ? null : 
                 (<div className={styles["paging"]}>...</div>)
-            }
+            } 
             
             {
-                GenerateCurrent(currentPage)
+                GenerateCurrent()
             }
 
             {
-                pageCount <= showMax + 3 || currentPage >= pageCount - 5 ? null : 
+                pageCount <= showMax + 3 || currentPage >= pageCount - 4 ? null : 
                 (<div className={styles["paging"]}>...</div>)
-            }
+            } 
 
             {
                 pageCount <= showMax + 3 ?
