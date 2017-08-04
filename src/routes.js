@@ -11,6 +11,8 @@ import PromotionNew from './components/Promotion/PromotionNew'
 import ReservationApp from './components/Reservation/ReservationApp'
 import Reservation from './components/Reservation/Reservation'
 import ReservationList from './components/Reservation/ReservationList'
+import Test from './components/App/Test'
+import Player from './components/App/Player'
 
 export default () => {
     return (
@@ -42,6 +44,12 @@ export default () => {
                         path="/reservation/new"
                         component={Reservation} />
                 </Route>
+                <Route path="/test">
+                    <IndexRoute component={ Test } />
+                </Route>
+                <Route
+                    path="/datatable"
+                    component={ Player } />
             </Route>
             <Route
                 path="/bill/:uid"

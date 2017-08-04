@@ -5,6 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
+    "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "numeral": "^2.0.6",
     "react": "^15.6.1",
@@ -29,6 +30,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "api": "json-server --watch api/db.json --routes api/route.json --port 8000"
+    "api": "json-server --watch api/db.json --routes api/route.json --port 9988"
   }
 }
